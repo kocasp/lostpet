@@ -33,6 +33,10 @@
           %polygon.fill-white{:points => "2560 0 2560 100 0 100"}
 
   %section#section-components.section.section-components.pb-0
+  .row
+    .col-md-12
+      .navigation.text-center
+        = will_paginate @ads, renderer: BootstrapPagination::Rails, previous_label: "<", next_label: ">", link_options: {class: "page-link"}
     .container{:style => "margin-bottom: 50px"}
       .card-profile.shadow
         %ul.list-group
@@ -63,6 +67,9 @@
                       = ad.chip ? "jest" : "brak"
                   %p
                     = ad.text
+    .col-md-12
+      .navigation.text-center
+        = will_paginate @ads, renderer: BootstrapPagination::Rails, previous_label: "<", next_label: ">", link_options: {class: "page-link"}
 
 %footer.footer.has-cards
   .container.container-lg

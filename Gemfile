@@ -21,6 +21,7 @@ gem 'font-awesome-rails'
 gem 'bootstrap-datepicker-rails'
 gem 'bootstrap', '~> 4.1.3'
 gem 'faker'
+gem 'will_paginate-bootstrap'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
