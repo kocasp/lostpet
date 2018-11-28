@@ -1,12 +1,7 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
 require 'faker'
 animal_types = ['Dog', 'Cat']
+
+Ad.destroy_all
 
 300.times do |i|
   animal = animal_types.sample
@@ -17,7 +12,7 @@ animal_types = ['Dog', 'Cat']
     name: "Faker::#{animal}".constantize.name,
     color: Faker::Color.color_name,
     title: "#{Faker::Dog.name}, #{Faker::Lorem.sentence}",
-    text: Faker::Lorem.paragraph,
+    text: Faker::Lorem.paragraphs(7).join,
     last_seen: 'Kraków',
     last_seen_lat: 50 + rand * 0.1,
     last_seen_long: 19.82 + rand * 0.2,
