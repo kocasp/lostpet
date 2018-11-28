@@ -1,0 +1,62 @@
+%main
+  .position-relative
+    / shape Hero
+    %section.section.section-shaped
+      .shape.shape-style-1.shape-primary
+        .top-background
+      .separator.separator-bottom.separator-skew
+        %svg{:preserveaspectratio => "none", :version => "1.1", :viewbox => "0 0 2560 100", :x => "0", :xmlns => "http://www.w3.org/2000/svg", :y => "0"}
+          %polygon.fill-white{:points => "2560 0 2560 100 0 100"}
+    / 1st Hero Variation
+  %section#section-components.section.section-components.pb-0
+    .container{:style => "margin-bottom: 50px"}
+      .nav-wrapper
+        %ul#tabs-icons-text.nav.nav-pills.nav-fill.flex-column.flex-md-row{:role => "tablist"}
+          %li.nav-item
+            %a#tabs-icons-text-1-tab.nav-link.mb-sm-3.mb-md-0.active{"aria-controls" => "tabs-icons-text-1", "aria-selected" => "true", "data-toggle" => "tab", :href => "#tabs-icons-text-1", :role => "tab"}
+              %i.fa.fa-list.mr-2>
+              Lista
+          %li.nav-item
+            %a#tabs-icons-text-2-tab.nav-link.mb-sm-3.mb-md-0{"aria-controls" => "tabs-icons-text-2", "aria-selected" => "false", "data-toggle" => "tab", :href => "#tabs-icons-text-2", :role => "tab"}
+              %i.fa.fa-map.mr-2>
+              Mapa
+      .card.shadow
+        .card-body
+          #myTabContent.tab-content
+            #tabs-icons-text-1.tab-pane.fade.show.active{"aria-labelledby" => "tabs-icons-text-1-tab", :role => "tabpanel"}
+              %p.description Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth.
+              %p.description Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse.
+            #tabs-icons-text-2.tab-pane.fade{"aria-labelledby" => "tabs-icons-text-2-tab", :role => "tabpanel"}
+              %p.description Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.
+%footer.footer
+  .container
+    .row.row-grid.align-items-center.my-md
+      .col-lg-6
+        %h3.text-primary.font-weight-light.mb-2 Thank you for supporting us!
+        %h4.mb-0.font-weight-light Let's get in touch on any of these platforms.
+      .col-lg-6.text-lg-center.btn-wrapper
+        %a.btn.btn-neutral.btn-icon-only.btn-twitter.btn-round.btn-lg{"data-original-title" => "Follow us", "data-toggle" => "tooltip", :href => "https://twitter.com/creativetim", :target => "_blank"}
+          %i.fa.fa-twitter
+        %a.btn.btn-neutral.btn-icon-only.btn-facebook.btn-round.btn-lg{"data-original-title" => "Like us", "data-toggle" => "tooltip", :href => "https://www.facebook.com/creativetim", :target => "_blank"}
+          %i.fa.fa-facebook-square
+        %a.btn.btn-neutral.btn-icon-only.btn-dribbble.btn-lg.btn-round{"data-original-title" => "Follow us", "data-toggle" => "tooltip", :href => "https://dribbble.com/creativetim", :target => "_blank"}
+          %i.fa.fa-dribbble
+        %a.btn.btn-neutral.btn-icon-only.btn-github.btn-round.btn-lg{"data-original-title" => "Star on Github", "data-toggle" => "tooltip", :href => "https://github.com/creativetimofficial", :target => "_blank"}
+          %i.fa.fa-github
+    %hr/
+    .row.align-items-center.justify-content-md-between
+      .col-md-6
+        .copyright
+          ©
+          %a{:href => "https://www.devlast.com", :target => "_blank"} Devlast
+          Konrad Strojny
+      .col-md-6
+        %ul.nav.nav-footer.justify-content-end
+          %li.nav-item
+            %a.nav-link{:href => "https://www.creative-tim.com", :target => "_blank"} Creative Tim
+          %li.nav-item
+            %a.nav-link{:href => "https://www.creative-tim.com/presentation", :target => "_blank"} About Us
+          %li.nav-item
+            %a.nav-link{:href => "http://blog.creative-tim.com", :target => "_blank"} Blog
+          %li.nav-item
+            %a.nav-link{:href => "https://github.com/creativetimofficial/argon-design-system/blob/master/LICENSE.md", :target => "_blank"} MIT License

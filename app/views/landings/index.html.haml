@@ -1,0 +1,84 @@
+%main
+  .position-relative
+    / Hero for FREE version
+    %section.section.section-lg.section-hero.section-shaped
+      / Background circles
+      .shape.shape-style-1.shape-primary
+        .top-background
+          /
+            <span class="span-150"></span>
+            <span class="span-50"></span>
+            <span class="span-50"></span>
+            <span class="span-75"></span>
+            <span class="span-100"></span>
+            <span class="span-75"></span>
+            <span class="span-50"></span>
+            <span class="span-100"></span>
+            <span class="span-50"></span>
+            <span class="span-100"></span>
+      .container.shape-container.d-flex.align-items-center.py-lg
+        .col.px-0
+          .row.align-items-center.justify-content-center
+            .col-lg-5.text-center
+              = image_tag('logo.svg', class: 'img-fluid', style: 'width: 100%')
+              %p.lead.text-white Baza zaginionych zwierząt
+              .btn-wrapper.mt-5
+                %a.btn.btn-block.btn-lg.btn-white.btn-icon.mb-3.mb-sm-0{:href => new_ad_url}
+                  %span.btn-inner--icon
+                    %i.fa.fa-exclamation-triangle
+                  %span.btn-inner--text Zgłos zaginięcie
+      / SVG separator
+      .separator.separator-bottom.separator-skew.zindex-100
+        %svg{:preserveaspectratio => "none", :version => "1.1", :viewbox => "0 0 2560 100", :x => "0", :xmlns => "http://www.w3.org/2000/svg", :y => "0"}
+          %polygon.fill-white{:points => "2560 0 2560 100 0 100"}
+  %section#section-components.section.section-components.pb-0
+    .container{:style => "margin-bottom: 50px"}
+      .card.card-profile.shadow
+        %ul.list-group
+          %li.list-group-item Cras justo odio
+          %li.list-group-item Dapibus ac facilisis in
+          %li.list-group-item Morbi leo risus
+          %li.list-group-item Porta ac consectetur ac
+          %li.list-group-item Vestibulum at eros
+%footer.footer.has-cards
+  .container.container-lg
+    .row
+      .col-md-6.mb-5.mb-md-0
+        .card.card-lift--hover.shadow.border-0
+          %a{:href => "./examples/landing.html", :title => "Landing Page"}
+            %img.card-img{:src => "./assets/img/theme/landing.jpg"}/
+      .col-md-6.mb-5.mb-lg-0
+        .card.card-lift--hover.shadow.border-0
+          %a{:href => "./examples/profile.html", :title => "Profile Page"}
+            %img.card-img{:src => "./assets/img/theme/profile.jpg"}/
+  .container
+    .row.row-grid.align-items-center.my-md
+      .col-lg-6
+        %h3.text-primary.font-weight-light.mb-2 Thank you for supporting us!
+        %h4.mb-0.font-weight-light Let's get in touch on any of these platforms.
+      .col-lg-6.text-lg-center.btn-wrapper
+        %a.btn.btn-neutral.btn-icon-only.btn-twitter.btn-round.btn-lg{"data-original-title" => "Follow us", "data-toggle" => "tooltip", :href => "https://twitter.com/creativetim", :target => "_blank"}
+          %i.fa.fa-twitter
+        %a.btn.btn-neutral.btn-icon-only.btn-facebook.btn-round.btn-lg{"data-original-title" => "Like us", "data-toggle" => "tooltip", :href => "https://www.facebook.com/creativetim", :target => "_blank"}
+          %i.fa.fa-facebook-square
+        %a.btn.btn-neutral.btn-icon-only.btn-dribbble.btn-lg.btn-round{"data-original-title" => "Follow us", "data-toggle" => "tooltip", :href => "https://dribbble.com/creativetim", :target => "_blank"}
+          %i.fa.fa-dribbble
+        %a.btn.btn-neutral.btn-icon-only.btn-github.btn-round.btn-lg{"data-original-title" => "Star on Github", "data-toggle" => "tooltip", :href => "https://github.com/creativetimofficial", :target => "_blank"}
+          %i.fa.fa-github
+    %hr/
+    .row.align-items-center.justify-content-md-between
+      .col-md-6
+        .copyright
+          ©
+          %a{:href => "https://www.devlast.com", :target => "_blank"} Devlast
+          Konrad Strojny
+      .col-md-6
+        %ul.nav.nav-footer.justify-content-end
+          %li.nav-item
+            %a.nav-link{:href => "https://www.creative-tim.com", :target => "_blank"} Creative Tim
+          %li.nav-item
+            %a.nav-link{:href => "https://www.creative-tim.com/presentation", :target => "_blank"} About Us
+          %li.nav-item
+            %a.nav-link{:href => "http://blog.creative-tim.com", :target => "_blank"} Blog
+          %li.nav-item
+            %a.nav-link{:href => "https://github.com/creativetimofficial/argon-design-system/blob/master/LICENSE.md", :target => "_blank"} MIT License

@@ -1,0 +1,78 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %title Lostpet
+    = csrf_meta_tags
+    %meta{:content => "width=device-width, initial-scale=1, shrink-to-fit=no", :name => "viewport"}/
+    %link{:href => "https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700", :rel => "stylesheet"}/
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+  %body
+    %header.header-global
+      %nav#navbar-main.navbar.navbar-main.navbar-expand-lg.navbar-transparent.navbar-light.headroom
+        .container
+          %a.navbar-brand.mr-lg-5{:href => root_url}
+            = image_tag('logo.svg')
+          %button.navbar-toggler{"aria-controls" => "navbar_global", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-target" => "#navbar_global", "data-toggle" => "collapse", :type => "button"}
+            %span.navbar-toggler-icon
+          #navbar_global.navbar-collapse.collapse
+            .navbar-collapse-header
+              .row
+                .col-6.collapse-brand
+                  %a{:href => "./index.html"}
+                    %img{:src => "./assets/img/brand/blue.png"}/
+                .col-6.collapse-close
+                  %button.navbar-toggler{"aria-controls" => "navbar_global", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-target" => "#navbar_global", "data-toggle" => "collapse", :type => "button"}
+                    %span
+                    %span
+            %ul.navbar-nav.navbar-nav-hover.align-items-lg-center
+              %li.nav-item.dropdown
+                %a.nav-link{"data-toggle" => "dropdown", :href => "#", :role => "button"}
+                  %i.ni.ni-ui-04.d-lg-none
+                  %span.nav-link-inner--text Informacje
+                .dropdown-menu.dropdown-menu-xl
+                  .dropdown-menu-inner
+                    %a.media.d-flex.align-items-center{:href => "https://demos.creative-tim.com/argon-design-system/docs/getting-started/overview.html"}
+                      .icon.icon-shape.bg-gradient-primary.rounded-circle.text-white
+                        %i.fa.fa-info{:style => "font-size: 18px; position: relative; top: -8px; left: -3px;"}
+                      .media-body.ml-3
+                        %h6.heading.text-primary.mb-md-1 Ile to kosztuje?
+                        %p.description.d-none.d-md-inline-block.mb-0
+                          Dodawanie ogłoszeń w
+                          %b lostpet.pl
+                          jest zupełnie darmowe. Możesz wesprzeć
+                          %b lostpet.pl
+                          wpłacając dobrowolną darowiznę.
+                    %a.media.d-flex.align-items-center{:href => "https://demos.creative-tim.com/argon-design-system/docs/foundation/colors.html"}
+                      .icon.icon-shape.bg-gradient-success.rounded-circle.text-white
+                        %i.ni.ni-palette
+                      .media-body.ml-3
+                        %h6.heading.text-primary.mb-md-1 Foundation
+                        %p.description.d-none.d-md-inline-block.mb-0 Learn more about colors, typography, icons and the grid system we used for Argon.
+                    %a.media.d-flex.align-items-center{:href => "https://demos.creative-tim.com/argon-design-system/docs/components/alerts.html"}
+                      .icon.icon-shape.bg-gradient-warning.rounded-circle.text-white
+                        %i.ni.ni-ui-04
+                      .media-body.ml-3
+                        %h5.heading.text-warning.mb-md-1 Components
+                        %p.description.d-none.d-md-inline-block.mb-0 Browse our 50 beautiful handcrafted components offered in the Free version.
+              /
+                <li class="nav-item dropdown">
+                <a href="#" class="nav-link" data-toggle="dropdown" href="#" role="button">
+                <i class="ni ni-collection d-lg-none"></i>
+                <span class="nav-link-inner--text">Examples</span>
+                </a>
+                <div class="dropdown-menu">
+                <a href="./examples/landing.html" class="dropdown-item">Landing</a>
+                <a href="./examples/profile.html" class="dropdown-item">Profile</a>
+                <a href="./examples/login.html" class="dropdown-item">Login</a>
+                <a href="./examples/register.html" class="dropdown-item">Register</a>
+                </div>
+                </li>
+            %ul.navbar-nav.align-items-lg-center.ml-lg-auto
+              %li.nav-item.d-none.d-lg-block.ml-lg-4
+                %a.btn.btn-neutral.btn-icon{:href => "https://www.creative-tim.com/product/argon-design-system", :target => "_blank"}
+                  %span.btn-inner--icon
+                    %i.fa.fa-facebook-square.mr-2
+                  %span.nav-link-inner--text Udostępnij
+    = yield
