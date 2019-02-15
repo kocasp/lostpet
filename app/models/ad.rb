@@ -22,4 +22,5 @@
 #
 
 class Ad < ApplicationRecord
+  mount_uploader :pet_image, PetUploader
 end
