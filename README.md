@@ -24,4 +24,6 @@ rake db:seed
 
 * Deployment instructions
 
+* Continous integration
+
 * ...
